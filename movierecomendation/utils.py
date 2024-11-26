@@ -8,6 +8,7 @@ def download_similarity_model():
     output = "movierecomendation/ml_model/similarity.pkl"
     #os.makedirs("./ml_model", exist_ok=True)
     if not os.path.exists(output):
+        os.makedirs("movierecomendation/ml_model", exist_ok=True)
         gdown.download(url, output, quiet=False)
 
 def download_movies_dict_model():
